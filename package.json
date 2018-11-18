@@ -1,0 +1,25 @@
+{
+  "name": "giantessparty",
+  "version": "0.0.1",
+  "description": "Giantess Party Website",
+  "main": "src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giantessparty/website.git"
+  },
+  "keywords": [
+    "giantess",
+    "party",
+    "giantessparty",
+    "website"
+  ],
+  "author": "GiantessParty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giantessparty/website/issues"
+  },
+  "homepage": "https://github.com/giantessparty/website#readme"
+}
