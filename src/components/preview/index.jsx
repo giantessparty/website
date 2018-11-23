@@ -4,12 +4,14 @@ import { connect } from 'redux-zero/preact';
 
 import './style';
 
-const Preview = ({img, id, alt}) => {
+const Preview = ({ preview }) => {
+	const { image, alt } = preview;
+
 	const previewClassName = classNames('preview', {
-		'visibile': (img !== null)
+		'visible': (image !== undefined)
 	});
-	const src = (img !== null) ? '' : img;
-	const altAttr = (img !== null) ? '' : alt;
+	const src = (image === undefined) ? '' : image;
+	const altAttr = (image === undefined) ? '' : alt;
 
 	return (
 		<div className={previewClassName}>
@@ -18,5 +20,7 @@ const Preview = ({img, id, alt}) => {
 	);
 };
 
-export default connect()(Preview);
+export default connect(
+	({ preview }) => ({ preview })
+)(Preview);
 

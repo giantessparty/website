@@ -1,2 +1,2 @@
 
-export const setPreview = (state, img, alt, id) => ({ img, alt, id });
+export const setPreview = (state, image) => ({ preview: {...image} });

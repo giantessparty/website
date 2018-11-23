@@ -1,22 +1,31 @@
 import { h, Component } from 'preact';
 import { connect } from 'redux-zero/preact';
 
+import actions from '../../../actions';
+
 import Item from './item';
 
 import './style';
 
 class Gallery extends Component {
+
+	onSelectImage = image => {
+		this.props.setPreview(image);
+	};
+
 	render() {
-		const { images } = this.props.gallery;
+		const { gallery } = this.props;
+		const { images } =gallery;
 
 		return (
 		<div className="gallery">
-			{images.map((img, i) => ( <Item key={i} image={img} />))}
+			{images.map((img, i) => ( <Item key={i} image={img} onSelect={this.onSelectImage} />))}
 		</div>
 		);
 	}
 }
 
 export default connect(
-	({ gallery }) => ({ gallery })
+	({ gallery }) => ({ gallery }),
+	actions
 )(Gallery);

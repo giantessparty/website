@@ -15,6 +15,10 @@ const initialState = {
 			{
 			image: 'https://giantessbooru.com/_images/bd2ce2ef4e74aa3346a74d55a639c29e/239671.jpg',
 			alt: 'wow'
+			},
+			{
+				image: 'https://giantessbooru.com/_images/7bf818cd43a50940bbd9e262328fd0ae/238794.JPG',
+				alt: 'babe',
 			}
 		],
 	},

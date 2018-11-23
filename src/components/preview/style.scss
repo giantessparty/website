@@ -1,7 +1,7 @@
 .preview {
 	position: fixed;
-	height: calc(100% - 56px);
-	top: 56px;
+	height: calc(100% - 52px);
+	top: 52px;
 	background: rgba(0, 0, 0, 1);
 	width: 100%;
 	bottom: 0;
@@ -15,5 +15,14 @@
 	&.visible {
 		visibility: visible;
 		transform: translate3d(0, 0, 0);
+	}
+
+	> img {
+		max-width: 100%;
+		max-height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
