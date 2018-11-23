@@ -10,7 +10,7 @@ import './style';
 class Gallery extends Component {
 
 	onSelectImage = image => {
-		this.props.setPreview(image);
+		this.props.setPreviewImage(image);
 	};
 
 	render() {

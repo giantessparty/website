@@ -25,4 +25,10 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+
+	> .delete {
+		position: absolute;
+		right: 10%;
+		top: 5%;
+	}
 }

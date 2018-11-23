@@ -2,25 +2,31 @@ import { h, Component } from 'preact';
 import classNames from 'classnames/bind';
 import { connect } from 'redux-zero/preact';
 
+import actions from '../../actions';
+
 import './style';
 
-const Preview = ({ preview }) => {
-	const { image, alt } = preview;
+const Preview = ({ preview, hidePreviewImage }) => {
+	const { show, image } = preview;
+
+	if(image === null) { return null; }
+
+	const { src, alt } = image;
 
 	const previewClassName = classNames('preview', {
-		'visible': (image !== undefined)
+		'visible': show,
 	});
-	const src = (image === undefined) ? '' : image;
-	const altAttr = (image === undefined) ? '' : alt;
 
 	return (
 		<div className={previewClassName}>
-			<img src={src} alt={altAttr} />
+			<img src={src} alt={alt} />
+			<a className="delete is-large" onClick={() => hidePreviewImage()} />
 		</div>
 	);
 };
 
 export default connect(
-	({ preview }) => ({ preview })
+	({ preview }) => ({ preview }),
+	actions,
 )(Preview);
 

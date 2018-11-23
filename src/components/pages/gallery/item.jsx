@@ -11,11 +11,14 @@ class Item extends Component {
 	}
 
 	render({image}) {
+
+		const { src, alt } = image;
+
 		const style = {
-			backgroundImage: `url(${image.image})`
+			backgroundImage: `url(${src})`
 		};
 
-		return (<div className="item" style={style} onClick={this.selectEvent} alt="" />);
+		return (<div className="item" style={style} onClick={this.selectEvent} alt={alt} />);
 	}
 }
 
