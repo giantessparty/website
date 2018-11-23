@@ -13,12 +13,15 @@ const bundler = new Bundler('./src/index.html', {
 console.log(`Loading .env file...`);
 env('./.env');
 
-app.use(express.static(__dirname + '../dist'));
-app.use(bundler.middleware());
+app.use(express.static(__dirname + '../../../dist'));
+
+if (process.env.NODE_ENV !== 'production') {
+	app.use(bundler.middleware());
+}
 
 // Wrap all requests to index.html.
 app.get('*', function(req, res){
-	res.sendFile('index.html');
+	res.sendFile(path.resolve(__dirname + '../../../dist/index.html'));
 });
 
 app.listen(process.env.PORT, process.env.HOST, () => {
