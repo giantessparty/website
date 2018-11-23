@@ -1,0 +1,19 @@
+.preview {
+	position: fixed;
+	height: calc(100% - 56px);
+	top: 56px;
+	background: rgba(0, 0, 0, 1);
+	width: 100%;
+	bottom: 0;
+	visibility: hidden;
+	will-change: transform;
+	transform: translate3d(0, 100%, 0);
+	transition-property: visibility, transform;
+	transition-duration: 0.2s;
+	z-index: 3;
+
+	&.visible {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+}

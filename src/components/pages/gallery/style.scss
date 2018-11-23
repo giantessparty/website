@@ -1,0 +1,26 @@
+.gallery {
+	position: relative;
+	max-height: calc(100% - 56px);
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-wrap: auto;
+	overflow-y: auto;
+
+	> .item {
+		width: calc(100% / 4);
+		background-position-x: center;
+		background-position-y: center;
+		background-size: cover;
+		transition-duration: .2s;
+
+		&::before {
+			display: block;
+			content: "";
+			width: 100%;
+			padding-top: 100%;
+		}
+	}
+}
+

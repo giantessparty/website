@@ -1,11 +1,13 @@
-// import 'promise-polyfill';
+import 'promise-polyfill';
 // import 'isomorphic-fetch';
 import { h, render } from 'preact';
+
+const containerDOM = document.getElementById('root');
 
 let root;
 function init() {
 	let App = require('./components/app').default;
-	root = render(<App />, document.getElementById('root'), root);
+	root = render(<App />, containerDOM, containerDOM.lastChild);
 }
 
 // register ServiceWorker via OfflinePlugin, for prod only:

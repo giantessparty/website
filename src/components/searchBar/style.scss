@@ -1,0 +1,16 @@
+@import "~style/_variables";
+
+.searchBar {
+	padding: 10px;
+	width: 100%;
+	background-color: $purple;
+
+	input {
+		font-size: $size-5;
+		width: 100%;
+		border: none;
+		border-bottom: 2px solid $black;
+		background-color: $purple;
+		color: $white;
+	}
+}
