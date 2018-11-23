@@ -6,7 +6,7 @@ const SearchBar = () => {
 	return (
 		<div className="searchBar">
 			<form>
-				<input type="search" placeholder="Search by tags." />
+				<input type="search" placeholder="Search Images/Albums/Users" />
 			</form>
 		</div>
 	);
