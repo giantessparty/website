@@ -44,7 +44,6 @@ class Header extends Component {
 			</div>
 			<div className={navbarMenuClassName}>
 				<div className="navbar-end">
-					<a className="navbar-item">Home</a>
 					<a className="navbar-item">Images</a>
 					<a className="navbar-item">Albums</a>
 					<a className="navbar-item">Tags</a>
