@@ -25,6 +25,10 @@ export default class App extends Component {
 						path="/albums"
 						getComponent={ () => import('./pages/gallery').then(module => module.default) }
 					/>
+					<AsyncRoute
+						path="/view/:id"
+						getComponent={ () => import('./pages/view').then(module => module.default) }
+					/>
 					</Router>
 					<Preview />
 				</div>

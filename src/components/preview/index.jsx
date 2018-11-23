@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import classNames from 'classnames/bind';
 import { connect } from 'redux-zero/preact';
+import { Link } from 'preact-router';
 
 import actions from '../../actions';
 
@@ -21,7 +22,7 @@ const Preview = ({ preview, hidePreviewImage }) => {
 		<div className={previewClassName}>
 			<img src={src} alt={alt} />
 			<a className="delete is-large" onClick={() => hidePreviewImage()} />
-			<a className="button is-primary">Download/Comments</a>
+			<Link className="button is-primary" onClick={() => hidePreviewImage()} href="/view/0">Download/Comments</Link>
 		</div>
 	);
 };
