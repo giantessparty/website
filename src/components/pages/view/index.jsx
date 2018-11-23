@@ -11,11 +11,11 @@ class View extends Component {
 
 		return (
 			<div>
-				<figure className="image">
-					<img src={src} alt={alt} />
-				</figure>
-
-
+				<div className="container">
+					<figure className="image">
+						<img src={src} alt={alt} />
+					</figure>
+				</div>
 				<div className="container">
 					<div className="content">
 						<p>
