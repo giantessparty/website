@@ -14,6 +14,7 @@
 		background-position-y: center;
 		background-size: cover;
 		transition-duration: .2s;
+		cursor: pointer;
 
 		&::before {
 			display: block;
