@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { Link } from 'preact-router/match';
 
 import classNames from 'classnames/bind';
 
@@ -44,10 +45,10 @@ class Header extends Component {
 			</div>
 			<div className={navbarMenuClassName}>
 				<div className="navbar-end">
-					<a className="navbar-item"><i className="fas fa-image"/>&nbsp;Images</a>
-					<a className="navbar-item"><i className="fas fa-images"/>&nbsp;Albums</a>
-					<a className="navbar-item"><i className="fas fa-tag"/>&nbsp;Tags</a>
-					<a className="navbar-item"><i className="fas fa-user"/>&nbsp;Account</a>
+					<Link activeClassName="is-active" className="navbar-item" href="/">Images</Link>
+					<Link activeClassName="is-active" className="navbar-item" href="/albums">Albums</Link>
+					<Link activeClassName="is-active" className="navbar-item" href="/tags">Tags</Link>
+					<Link activeClassName="is-active" className="navbar-item" href="/login">Account</Link>
 				</div>
 			</div>
 		</nav>

@@ -21,6 +21,7 @@ const Preview = ({ preview, hidePreviewImage }) => {
 		<div className={previewClassName}>
 			<img src={src} alt={alt} />
 			<a className="delete is-large" onClick={() => hidePreviewImage()} />
+			<a className="button is-primary">Download/Comments</a>
 		</div>
 	);
 };

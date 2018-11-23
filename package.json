@@ -45,6 +45,7 @@
     "bulma": "^0.7.2",
     "classnames": "^2.2.6",
     "preact": "^8.3.1",
+    "preact-async-route": "^2.2.1",
     "preact-router": "^2.6.1",
     "promise-polyfill": "^8.1.0",
     "redux-zero": "^4.15.0",
