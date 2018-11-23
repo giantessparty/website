@@ -44,10 +44,10 @@ class Header extends Component {
 			</div>
 			<div className={navbarMenuClassName}>
 				<div className="navbar-end">
-					<a className="navbar-item">Images</a>
-					<a className="navbar-item">Albums</a>
-					<a className="navbar-item">Tags</a>
-					<a className="navbar-item">Account</a>
+					<a className="navbar-item"><i className="fas fa-image"/>&nbsp;Images</a>
+					<a className="navbar-item"><i className="fas fa-images"/>&nbsp;Albums</a>
+					<a className="navbar-item"><i className="fas fa-tag"/>&nbsp;Tags</a>
+					<a className="navbar-item"><i className="fas fa-user"/>&nbsp;Account</a>
 				</div>
 			</div>
 		</nav>
