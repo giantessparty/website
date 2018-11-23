@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build ./src/index.html",
     "watch": "parcel watch ./src/index.html",
-    "serve": "parcel serve ./src/index.html"
+    "serve": "node ./src/server/index.js"
   },
   "repository": {
     "type": "git",
@@ -37,13 +37,18 @@
     "@babel/preset-env": "^7.1.6",
     "autoprefixer": "^9.3.1",
     "babel-cli": "^6.26.0",
+    "node-env-file": "^0.1.8",
     "parcel-bundler": "^1.10.3",
+    "pg": "^7.6.1",
     "postcss-modules": "^1.4.1",
+    "redis": "^2.8.0",
     "sass": "^1.15.1"
   },
   "dependencies": {
     "bulma": "^0.7.2",
     "classnames": "^2.2.6",
+    "cloudinary": "^1.13.2",
+    "express": "^4.16.4",
     "preact": "^8.3.1",
     "preact-async-route": "^2.2.1",
     "preact-router": "^2.6.1",

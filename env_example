@@ -1,0 +1,10 @@
+NODE_ENV="development"
+HOST="localhost"
+PORT=1234
+
+DATABASE_HOST="localhost"
+DATABASE_PORT=5432
+DATABASE_USER="root"
+DATABASE_PASSWORD="root"
+DATABASE_DATABASE="giantessparty"`
+
