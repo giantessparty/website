@@ -2,6 +2,7 @@ const Bundler = require('parcel-bundler');
 const path = require('path');
 const express = require('express');
 const env = require('node-env-file');
+const { setupDatabaseEnviroment } = require('./database');
 
 let app = express();
 
@@ -12,6 +13,12 @@ const bundler = new Bundler('./src/index.html', {
 
 console.log(`Loading .env file...`);
 env('./.env');
+
+console.log('Establishing pool connection to Postgres...');
+const db = setupDatabaseEnviroment();
+db.query('SELECT NOW()', [], (err, res) => {
+	console.log(err, res);
+});
 
 app.use(express.static(__dirname + '../../../dist'));
 
