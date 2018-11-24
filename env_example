@@ -1,10 +1,17 @@
 NODE_ENV="development"
 HOST="localhost"
 PORT=1234
+CACHE_QUERIES=false
 
-DATABASE_HOST="localhost"
-DATABASE_PORT=5432
-DATABASE_USER="root"
-DATABASE_PASSWORD="root"
-DATABASE_DATABASE="giantessparty"`
+PGHOST="localhost"
+PGPORT=5432
+PGUSER="postgres"
+PGPASSWORD="postgres"
+PGDATABASE="giantessparty"
+
+REDISHOST="localhost"
+REDISPORT=6379
+
+IMAGE_CDN_URL=""
+CLOUDINARY_URL=""
 
